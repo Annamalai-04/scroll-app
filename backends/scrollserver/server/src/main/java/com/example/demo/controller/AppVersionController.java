@@ -18,7 +18,7 @@ public class AppVersionController {
         Map<String, Object> response =
                 new HashMap<>();
 
-        response.put("latestVersionCode", 2);
+        response.put("latestVersionCode", 1);
         response.put("latestVersionName", "1.1");
         response.put("minimumVersionCode", 1);
 
