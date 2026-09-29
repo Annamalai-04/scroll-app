@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.example.myapplication.utils.SwipeFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- VIDEO -->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/videoPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- LEFT PANEL -->
+
+    <include
+        android:id="@+id/leftPanel"
+        layout="@layout/left_panel" />
+
+
+    <!-- RIGHT PANEL -->
+
+    <include
+        android:id="@+id/rightPanel"
+        layout="@layout/right_panel" />
+
+</com.example.myapplication.utils.SwipeFrameLayout>

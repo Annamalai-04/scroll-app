@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme.MyApplication"
+        parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- Your theme settings if you have any -->
+
+    </style>
+
+</resources>

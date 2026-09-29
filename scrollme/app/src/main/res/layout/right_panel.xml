@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rightPanelLayout"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="#E6101010"
+    android:padding="10dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:id="@+id/rightPanelContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

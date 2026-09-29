@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scrollserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scrollserver
+  template:
+    metadata:
+      labels:
+        app: scrollserver
+    spec:
+      containers:
+        - name: scrollserver
+          image: annamalaikumar/scrollserver:1.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: scrollserver-secret
+                  key: MONGO_URI
+            - name: MONGO_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: scrollserver-secret
+                  key: MONGO_DATABASE

@@ -1,0 +1,85 @@
+# =========================
+# Eclipse
+# =========================
+.metadata/
+.classpath
+.project
+.settings/
+.factorypath
+
+# =========================
+# Android Studio
+# =========================
+.idea/
+*.iml
+.vscode/
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+**/build/
+
+# =========================
+# Android generated files
+# =========================
+app/release/
+*.apk
+*.aab
+
+# =========================
+# Android local configuration
+# =========================
+local.properties
+
+# =========================
+# Android signing keys
+# =========================
+*.jks
+*.keystore
+scrollapplication-release
+
+# =========================
+# Java
+# =========================
+*.class
+
+# =========================
+# Maven / Spring Boot
+# =========================
+target/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
+
+# Android generated release files
+app/release/
+
+# Android signing key
+scrollapplication-release
+
+scrollme/app/release/
+**/release/

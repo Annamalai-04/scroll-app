@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/history_item_box">
+
+    <TextView
+        android:id="@+id/historyVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIDEO: VID001"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/historyWatched"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WATCHED: 70.7%"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/historyDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATE: ..."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="3dp" />
+
+    <Button
+        android:id="@+id/historyWatchButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:text="WATCH"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/panel_tab_selector"
+        android:layout_marginTop="5dp"
+        android:padding="0dp" />
+
+</LinearLayout>

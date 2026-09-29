@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!--
+        Every ViewPager2 page owns this PlayerView.
+        TextureView gives each page an independent rendering surface.
+        The Media3 built-in buffering indicator is disabled because the
+        custom bufferingOverlay below is the only loading indicator.
+    -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:surface_type="texture_view"
+        app:resize_mode="zoom"
+        app:use_controller="true"
+        app:controller_layout_id="@layout/exo_player_control_view"
+        app:show_timeout="2000"
+        app:hide_on_touch="false"
+        app:auto_show="true"
+        app:show_buffering="never" />
+
+
+    <!-- Only this page's loading indicator. -->
+    <FrameLayout
+        android:id="@+id/bufferingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false">
+
+        <ProgressBar
+            android:id="@+id/bufferingSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="34dp" />
+
+        <TextView
+            android:id="@+id/bufferingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="82dp"
+            android:text="please wait few sec...."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <!-- Like stays above the loading layer. -->
+    <Button
+        android:id="@+id/likeButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="52dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:text="♡"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:minWidth="0dp"
+        android:minHeight="0dp" />
+
+    <TextView
+        android:id="@+id/resumingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Resuming.."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</FrameLayout>
