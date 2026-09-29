@@ -6,7 +6,7 @@
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_gravity="end"
-    android:background="#E6101010"
+    android:background="#D9101010"
     android:padding="10dp"
     android:clickable="true"
     android:focusable="true">
