@@ -111,24 +111,21 @@ jobs:
 
     steps:
 
-      - name: Deploy to EC2 K3s
-        env:
-          EC2_HOST: ${{ secrets.EC2_HOST }}
-          EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
-          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
-        run: |
+    - name: Deploy to EC2 K3s
+      env:
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+        EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
+        EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+run: |
+    mkdir -p ~/.ssh
 
-          mkdir -p ~/.ssh
+    printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/scrollserver.pem
 
-          echo "$EC2_SSH_KEY" > ~/.ssh/scrollserver.pem
+    chmod 600 ~/.ssh/scrollserver.pem
 
-          chmod 600 ~/.ssh/scrollserver.pem
-
-          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
-
-          ssh \
-            -i ~/.ssh/scrollserver.pem \
-            "$EC2_USERNAME@$EC2_HOST" << 'EOF'
+    ssh -o StrictHostKeyChecking=no \
+      -i ~/.ssh/scrollserver.pem \
+      "$EC2_USERNAME@$EC2_HOST" << 'EOF'
 
             set -e
 
